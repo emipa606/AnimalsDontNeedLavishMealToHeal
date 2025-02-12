@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <VFR.added>[VetFoodRestriction]: Added the food restriction {0}</VFR.added>
+  <VFR.exists>[VetFoodRestriction]: The food restriction already exist! The restriction is named {0}</VFR.exists>
+  <VFR.cantDelete>[VetFoodRestriction]: You can't delete this restriction</VFR.cantDelete>
+  <VFR.restrictionTitle>Animal medical food</VFR.restrictionTitle>
+</LanguageData>
