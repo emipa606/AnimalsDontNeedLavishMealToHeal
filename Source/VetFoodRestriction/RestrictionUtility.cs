@@ -15,22 +15,22 @@ internal class RestrictionUtility
     {
         foreach (var allFoodRestriction in foodRestrictionDatabase.AllFoodRestrictions)
         {
-            if (allFoodRestriction.label != FoodRestrictionDatabase_ExposeData.Instance.restrictionName ||
-                allFoodRestriction.id != FoodRestrictionDatabase_ExposeData.Instance.restrictionId)
+            if (allFoodRestriction.label != FoodRestrictionDatabase_ExposeData.Instance.RestrictionName ||
+                allFoodRestriction.id != FoodRestrictionDatabase_ExposeData.Instance.RestrictionId)
             {
                 continue;
             }
 
-            FoodRestrictionDatabase_ExposeData.Instance.foodRestiction = allFoodRestriction;
+            FoodRestrictionDatabase_ExposeData.Instance.FoodRestiction = allFoodRestriction;
 
             return false;
         }
 
         var foodRestriction = foodRestrictionDatabase.MakeNewFoodRestriction();
         foodRestriction.label = "VFR.restrictionTitle".Translate();
-        FoodRestrictionDatabase_ExposeData.Instance.foodRestiction = foodRestriction;
-        FoodRestrictionDatabase_ExposeData.Instance.restrictionName = foodRestriction.label;
-        FoodRestrictionDatabase_ExposeData.Instance.restrictionId = foodRestriction.id;
+        FoodRestrictionDatabase_ExposeData.Instance.FoodRestiction = foodRestriction;
+        FoodRestrictionDatabase_ExposeData.Instance.RestrictionName = foodRestriction.label;
+        FoodRestrictionDatabase_ExposeData.Instance.RestrictionId = foodRestriction.id;
         foreach (var allDef in DefDatabase<ThingDef>.AllDefs)
         {
             if (allDef.ingestible != null && (int)allDef.ingestible.preferability >= 7 &&

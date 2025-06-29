@@ -13,7 +13,7 @@ internal class FoodUtility_WillEat_Thing
     {
         if (getter != null && RestrictionUtility.WillFeedPatientAnimal(__result, p, getter))
         {
-            __result = FoodRestrictionDatabase_ExposeData.Instance.foodRestiction.Allows(food);
+            __result = FoodRestrictionDatabase_ExposeData.Instance.FoodRestiction.Allows(food);
         }
     }
 }

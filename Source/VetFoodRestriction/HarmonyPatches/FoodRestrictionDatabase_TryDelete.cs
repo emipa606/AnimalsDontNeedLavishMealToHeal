@@ -10,7 +10,7 @@ internal class FoodRestrictionDatabase_TryDelete
     [HarmonyPrefix]
     public static bool PreserveFoodRestriction(FoodPolicy foodPolicy, ref AcceptanceReport __result)
     {
-        if (foodPolicy != FoodRestrictionDatabase_ExposeData.Instance.foodRestiction)
+        if (foodPolicy != FoodRestrictionDatabase_ExposeData.Instance.FoodRestiction)
         {
             return true;
         }

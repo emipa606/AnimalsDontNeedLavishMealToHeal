@@ -9,19 +9,16 @@ internal class FoodRestrictionDatabase_ExposeData
 {
     private static FoodRestrictionDatabase_ExposeData instance;
 
-    public FoodPolicy foodRestiction;
+    public FoodPolicy FoodRestiction;
 
-    public int restrictionId;
-    public string restrictionName;
+    public int RestrictionId;
+    public string RestrictionName;
 
     public static FoodRestrictionDatabase_ExposeData Instance
     {
         get
         {
-            if (instance == null)
-            {
-                instance = new FoodRestrictionDatabase_ExposeData();
-            }
+            instance ??= new FoodRestrictionDatabase_ExposeData();
 
             return instance;
         }
@@ -31,12 +28,12 @@ internal class FoodRestrictionDatabase_ExposeData
     {
         if (Scribe.mode == LoadSaveMode.Saving)
         {
-            Instance.restrictionName = Instance.foodRestiction.label;
-            Instance.restrictionId = Instance.foodRestiction.id;
+            Instance.RestrictionName = Instance.FoodRestiction.label;
+            Instance.RestrictionId = Instance.FoodRestiction.id;
         }
 
-        Scribe_Values.Look(ref Instance.restrictionName, "Sielfyr.VetFoodRestrictionrestrictionName",
+        Scribe_Values.Look(ref Instance.RestrictionName, "Sielfyr.VetFoodRestrictionrestrictionName",
             "VetFoodRestriction");
-        Scribe_Values.Look(ref Instance.restrictionId, "Sielfyr.VetFoodRestrictionrestrictionId", -1);
+        Scribe_Values.Look(ref Instance.RestrictionId, "Sielfyr.VetFoodRestrictionrestrictionId", -1);
     }
 }
