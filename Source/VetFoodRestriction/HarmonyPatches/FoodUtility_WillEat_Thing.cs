@@ -6,7 +6,7 @@ namespace VetFoodRestriction.HarmonyPatches;
 
 [HarmonyPatch(typeof(FoodUtility), nameof(FoodUtility.WillEat), typeof(Pawn), typeof(Thing), typeof(Pawn),
     typeof(bool), typeof(bool))]
-internal class FoodUtility_WillEat_Thing
+internal static class FoodUtility_WillEat_Thing
 {
     [HarmonyPriority(200)]
     public static void Postfix(ref bool __result, Pawn p, Thing food, Pawn getter)

@@ -6,7 +6,7 @@ using Verse;
 namespace VetFoodRestriction.HarmonyPatches;
 
 [HarmonyPatch(typeof(MainTabWindow_Animals), nameof(MainTabWindow_Animals.DoWindowContents))]
-internal class MainTabWindow_Animals_DoWindowContents
+internal static class MainTabWindow_Animals_DoWindowContents
 {
     public static void Postfix(Rect rect)
     {

@@ -7,8 +7,6 @@ namespace VetFoodRestriction.HarmonyPatches;
 [HarmonyPatch(typeof(FoodRestrictionDatabase), nameof(FoodRestrictionDatabase.ExposeData))]
 internal class FoodRestrictionDatabase_ExposeData
 {
-    private static FoodRestrictionDatabase_ExposeData instance;
-
     public FoodPolicy FoodRestiction;
 
     public int RestrictionId;
@@ -18,9 +16,9 @@ internal class FoodRestrictionDatabase_ExposeData
     {
         get
         {
-            instance ??= new FoodRestrictionDatabase_ExposeData();
+            field ??= new FoodRestrictionDatabase_ExposeData();
 
-            return instance;
+            return field;
         }
     }
 

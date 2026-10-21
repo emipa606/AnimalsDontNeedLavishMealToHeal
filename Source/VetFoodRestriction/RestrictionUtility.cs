@@ -4,7 +4,7 @@ using VetFoodRestriction.HarmonyPatches;
 
 namespace VetFoodRestriction;
 
-internal class RestrictionUtility
+internal static class RestrictionUtility
 {
     public static bool WillFeedPatientAnimal(bool willEatValue, Pawn p, Pawn getter)
     {

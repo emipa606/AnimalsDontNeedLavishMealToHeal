@@ -4,7 +4,7 @@ using Verse;
 namespace VetFoodRestriction.HarmonyPatches;
 
 [HarmonyPatch(typeof(Game), nameof(Game.FinalizeInit))]
-internal class Game_FinalizeInit
+internal static class Game_FinalizeInit
 {
     public static void Postfix(ref Game __instance)
     {
